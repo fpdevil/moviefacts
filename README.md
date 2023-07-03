@@ -1,3 +1,9 @@
+# Movie Information
+
+A movie information portal with the data pulled from [TmDb][tmdb]. The application template is created bootstrapping with react `create-react-app`.
+
+A working demo of the application is available at https://moviefacts-ui.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +74,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+[tmdb]: https://www.themoviedb.org/
