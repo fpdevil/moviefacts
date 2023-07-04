@@ -8,11 +8,19 @@ import { ExternalMovieInfo } from '../components/ExternalMovieInfo';
 import Backup from '../assets/images/backup.png';
 import Iso639 from '../data/iso639.json';
 
-function parseYear(year) {
+function parseDate(year) {
     if (!year) {
         return 'N/A';
     } else {
-        return year.substring(0, 4);
+        // return year.substring(0, 4);
+        return new Date(year).toLocaleDateString(
+            'en-us',
+            {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+            }
+        );
     }
 }
 
@@ -144,14 +152,6 @@ export const MovieInformation = () => {
 
                     {/* for the movie information like data, time etc., */}
                     <div className="flex flex-wrap items-center font-bold max-w-2xl my-4 content-start sm:content-end md:content-center lg:content-between xl:content-around">
-                        <div className="flex-1">
-                            <p className="mb-1 text-slate-400">
-                                Year
-                            </p>
-                            <p className="text-sm font-medium">
-                                {parseYear(movie.release_date)}
-                            </p>
-                        </div>
                         {movie.releases && (
                             <div className="flex-1">
                                 <p className="mb-1 text-slate-400">
@@ -184,6 +184,14 @@ export const MovieInformation = () => {
                             <p className="mb-1 text-slate-400">Status</p>
                             <p className="text-sm font-medium">
                                 {movie.status}
+                            </p>
+                        </div>
+                        <div className="flex-1">
+                            <p className="mb-1 text-slate-400">
+                                Date
+                            </p>
+                            <p className="text-sm font-medium">
+                                {parseDate(movie.release_date)}
                             </p>
                         </div>
                     </div>
