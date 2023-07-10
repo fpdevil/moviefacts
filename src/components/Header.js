@@ -37,7 +37,7 @@ export const Header = () => {
     };
 
     return (
-        <header>
+        <header className="sticky top-0 z-50">
             <nav className="bg-white border-b-2 border-gray-200 px-2 py-2 sm:px-4 dark:bg-gray-900 dark:border-b-1 dark:border-gray-900">
                 <div className="container flex flex-wrap justify-between items-center mx-auto">
                     {/* What to do when Logo on top left is clicked */}
