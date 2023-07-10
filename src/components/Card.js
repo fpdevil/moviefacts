@@ -6,9 +6,9 @@ export const Card = ({ movie }) => {
     const image = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : Backup;
 
     return (
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 overflow-hidden">
             <Link to={`/movie/${id}`}>
-              <img className="rounded-t-lg opacity-100 transition duration-300 ease-in-out hover:opacity-90" src={image} alt="" />
+              <img className="rounded-t-lg opacity-100 transition duration-300 ease-in-out hover:scale-105" src={image} alt="" />
             </Link>
             <div className="p-5">
                 <Link to={`/movie/${id}`}>
