@@ -151,7 +151,7 @@ export const MovieInformation = () => {
 
 
                     {/* for the movie information like data, time etc., */}
-                    <div className="flex flex-wrap items-center font-bold max-w-2xl my-4 content-start sm:content-end md:content-center lg:content-between xl:content-around">
+                    <div className="flex flex-wrap my-4 justify-evenly gap-4 sm:justify-start">
                         {movie.releases && (
                             <div className="flex-1">
                                 <p className="mb-1 text-slate-400">
