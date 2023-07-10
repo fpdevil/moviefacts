@@ -145,6 +145,11 @@ export const Header = () => {
                                     Upcoming Movies
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/movies/trending" className={({ isActive }) => isActive ? activeClass : inActiveClass}>
+                                    Trending Today
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
                 </div>
