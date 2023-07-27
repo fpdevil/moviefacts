@@ -6,9 +6,9 @@ export const Card = ({ movie }) => {
     const image = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : Backup;
 
     return (
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 overflow-hidden">
+        <div className="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3 overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
             <Link to={`/movie/${id}`}>
-              <img className="rounded-t-lg opacity-100 transition duration-300 ease-in-out hover:scale-105" src={image} alt="" />
+              <img className="rounded-t-2xl rounded-b-xl p-2 opacity-100 transition duration-300 ease-in-out hover:scale-105" src={image} alt="" />
             </Link>
             <div className="p-5">
                 <Link to={`/movie/${id}`}>
@@ -16,7 +16,7 @@ export const Card = ({ movie }) => {
                         {original_title}
                     </h5>
                 </Link>
-                <p className="mb-3 font-normal text-justify text-gray-700 dark:text-gray-400">
+                <p className="mb-3 text-sm font-normal text-justify text-gray-700 dark:text-gray-400">
                     {overview}
                 </p>
                 <Link to={`/movie/${id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
